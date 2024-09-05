@@ -3,37 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
-    <form>
-      <input type="search" placeholder="Enter a city ..." />
-      <input type="submit" value="Search" />
-    </form>
-    <div>City Name</div>
-    <div>Day hh:mm<span>, Weather Status</span></div>
-    <div>Feels Like: <span>00</span>℃</div>
-    <div>Humidity: <span>00</span>%</div>
-    <div>Wind Speed: <span>0</span>km/h</div>
-    <div>⛅<span>00</span>℃</div>
-    <div>
-      Coded by
-      <a href="https://www.linkedin.com/in/dianpisseca/" target="_blank"
-        >Dian Pisseca</a
-      >
-      <span
-        >, is open-sourced on
-        <a
-          href="https://github.com/dianpisseca/vanilla-weather-app"
-          target="_blank"
-          >GitHub</a
-        > </span
-      ><span
-        >and hosted by
-        <a href="https://dp-weather-app.netlify.app/" target="_blank"
-          >Netlify</a
-        ></span
-      >
+    <div class="box">
+      <form>
+        <input type="search" placeholder="Enter a city ..." />
+        <input type="submit" value="Search" />
+      </form>
+      <div>City Name</div>
+      <div>⛅</div>
+      <div><span>00</span>°</div>
+      <div>Day hh:mm</div>
+      <div>Weather Status</div>
+      <div>Feels Like: <span>00</span>℃</div>
+      <div>Humidity: <span>00</span>%</div>
+      <div>Wind Speed: <span>0</span>km/h</div>
+      <div>Forecast</div>
+      <ul>
+        <li>Today ☀️ L:0° H:0°</li>
+        <li>Fri ☀️ L:0° H:0°</li>
+        <li>Sat ☀️ L:0° H:0°</li>
+        <li>Sun ☀️ L:0° H:0°</li>
+        <li>Mon ☀️ L:0° H:0°</li>
+        <li>Tue ☀️ L:0° H:0°</li>
+        <li>Wed ☀️ L:0° H:0°</li>
+        <li>Thu ☀️ L:0° H:0°</li>
+      </ul>
+
+      <div>
+        Coded by
+        <a href="https://www.linkedin.com/in/dianpisseca/" target="_blank"
+          >Dian Pisseca</a
+        >
+        <span
+          >, is open-sourced on
+          <a
+            href="https://github.com/dianpisseca/vanilla-weather-app"
+            target="_blank"
+            >GitHub</a
+          > </span
+        ><span
+          >and hosted on
+          <a href="https://dp-weather-app.netlify.app/" target="_blank"
+            >Netlify</a
+          ></span
+        >
+      </div>
     </div>
   </body>
 </html>
