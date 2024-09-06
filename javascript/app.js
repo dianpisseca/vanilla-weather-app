@@ -22,9 +22,8 @@ function displayTemp(response) {
   currentStatus = document.querySelector(".current-weather-status");
   currentStatus.innerHTML = status;
 
-  let weatherIcon = response.data.condition.icon; // to change
-  currentWeatherIcon = document.querySelector(".current-weather-icon");
-  currentWeatherIcon.innerHTML = weatherIcon;
+  let currentWeatherIcon = document.querySelector(".current-weather-icon");
+  currentWeatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-weather-icon"/>`;
 
   console.log(response);
 }
