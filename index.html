@@ -4,35 +4,115 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <title>Weather App</title>
   </head>
   <body>
-    <div class="box">
-      <form>
-        <input type="search" placeholder="Enter a city ..." />
-        <input type="submit" value="Search" />
+    <div class="container">
+      <form class="search-form">
+        <div class="search-bar">
+          <span class="material-symbols-outlined" id="search-form-icon">
+            search
+          </span>
+          <input
+            type="search"
+            placeholder="Enter a city ..."
+            class="search-form-input"
+            required
+            autofocus
+          />
+        </div>
+        <input type="submit" value="Search" class="search-form-button" />
       </form>
-      <div>City Name</div>
-      <div>⛅</div>
-      <div><span>00</span>°</div>
-      <div>Day hh:mm</div>
-      <div>Weather Status</div>
-      <div>Feels Like: <span>00</span>℃</div>
-      <div>Humidity: <span>00</span>%</div>
-      <div>Wind Speed: <span>0</span>km/h</div>
-      <div>Forecast</div>
-      <ul>
-        <li>Today ☀️ L:0° H:0°</li>
-        <li>Fri ☀️ L:0° H:0°</li>
-        <li>Sat ☀️ L:0° H:0°</li>
-        <li>Sun ☀️ L:0° H:0°</li>
-        <li>Mon ☀️ L:0° H:0°</li>
-        <li>Tue ☀️ L:0° H:0°</li>
-        <li>Wed ☀️ L:0° H:0°</li>
-        <li>Thu ☀️ L:0° H:0°</li>
-      </ul>
+      <div class="main-display">
+        <div class="cityName">Sydney</div>
 
-      <div>
+        <div class="current-weather-icon">⛅</div>
+        <div class="current-weather-container">
+          <div class="current-weather-temp">30</div>
+          <div class="current-weather-unit">°</div>
+        </div>
+
+        <div class="current-time">Day hh:mm</div>
+        <div class="current-weather-status">Weather Status</div>
+      </div>
+      <div class="feels-like">
+        Feels Like: <span class="feels-like-temp">20℃</span>
+      </div>
+      <div class="display-container">
+        <div class="humidity">
+          Humidity: <span class="current-humidity">00%</span>
+        </div>
+        <div class="windSpeed">
+          Wind Speed: <span class="current-wind-speed">0km/h</span>
+        </div>
+      </div>
+      <div class="forecast-container">
+        <div class="forecast-header">
+          <span class="material-symbols-outlined" id="forecast-header-icon">
+            calendar_month
+          </span>
+          <span class="forecast-header-text">Daily Forecast</span>
+        </div>
+        <hr />
+        <ul>
+          <li class="box" id="today-box">
+            Today <span class="icon" id="today-icon">☀️</span>
+            <span class="lowTemp" id="today-low-temp">L:0°</span>
+            <span class="highTemp" id="today-high-temp">H:0°</span>
+          </li>
+          <li class="box" id="sun-box">
+            Sun <span class="icon" id="sun-icon">☀️</span
+            ><span class="lowTemp" id="sun-low-temp">L:0°</span>
+            <span class="highTemp" id="sun-high-temp">H:0°</span>
+          </li>
+          <li class="box" id="mon-box">
+            Mon <span class="icon" id="mon-icon">☀️</span
+            ><span class="lowTemp" id="sun-low-temp">L:0°</span>
+            <span class="highTemp" id="mon-high-temp">H:0°</span>
+          </li>
+          <li class="box" id="tue-box">
+            Tue <span class="icon" id="tue-icon">☀️</span
+            ><span class="lowTemp" id="sun-low-temp">L:0°</span>
+            <span class="highTemp" id="tue-high-temp">H:0°</span>
+          </li>
+          <li class="box" id="wed-box">
+            Wed <span class="icon" id="wed-icon">☀️</span
+            ><span class="lowTemp" id="sun-low-temp">L:0°</span>
+            <span class="highTemp" id="wed-high-temp">H:0°</span>
+          </li>
+          <li class="box" id="thu-box">
+            Thu <span class="icon" id="thu-icon">☀️</span
+            ><span class="lowTemp" id="sun-low-temp">L:0°</span>
+            <span class="highTemp" id="thu-high-temp">H:0°</span>
+          </li>
+          <li class="box" id="fri-box">
+            Fri <span class="icon" id="fri-icon">☀️</span
+            ><span class="lowTemp" id="sun-low-temp">L:0°</span>
+            <span class="highTemp" id="fri-high-temp">H:0°</span>
+          </li>
+          <li class="box" id="sat-box">
+            Sat <span class="icon" id="sat-icon">☀️</span
+            ><span class="lowTemp" id="sun-low-temp">L:0°</span>
+            <span class="highTemp" id="sat-high-temp">H:0°</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer">
         Coded by
         <a href="https://www.linkedin.com/in/dianpisseca/" target="_blank"
           >Dian Pisseca</a
