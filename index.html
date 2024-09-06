@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +23,7 @@
   </head>
   <body>
     <div class="container">
-      <form class="search-form">
+      <form class="search-form" id="search-city">
         <div class="search-bar">
           <span class="material-symbols-outlined" id="search-form-icon">
             search
@@ -37,6 +38,7 @@
         </div>
         <input type="submit" value="Search" class="search-form-button" />
       </form>
+
       <div class="main-display">
         <div class="cityName">Sydney</div>
 
@@ -132,6 +134,7 @@
         >
       </div>
     </div>
+
     <script src="javascript/app.js"></script>
   </body>
 </html>
